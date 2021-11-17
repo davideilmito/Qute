@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct ActivitiesView: View {
+    
+    init(){
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.init(Color(red: 143/255, green: 149/255, blue: 211/255))]
+        
+        
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
+        NavigationView{
+            
+            VStack{
+                                
+                
+            }.navigationTitle("Activities")
+            
+        }
+        
+        
     }
 }
 

@@ -21,6 +21,16 @@
 		D72E4646274508A90065C25F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E461C274508A60065C25F /* ContentView.swift */; };
 		D72E4647274508A90065C25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72E461D274508A80065C25F /* Assets.xcassets */; };
 		D72E4648274508A90065C25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72E461D274508A80065C25F /* Assets.xcassets */; };
+		D73117A427455DE7008C33DB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A327455DE7008C33DB /* Home.swift */; };
+		D73117A527455DE7008C33DB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A327455DE7008C33DB /* Home.swift */; };
+		D73117A727456185008C33DB /* PetStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A627456185008C33DB /* PetStatsView.swift */; };
+		D73117A827456185008C33DB /* PetStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A627456185008C33DB /* PetStatsView.swift */; };
+		D73117AA274561AF008C33DB /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A9274561AF008C33DB /* ActivitiesView.swift */; };
+		D73117AB274561AF008C33DB /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A9274561AF008C33DB /* ActivitiesView.swift */; };
+		D73117AD274561E5008C33DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AC274561E5008C33DB /* SettingsView.swift */; };
+		D73117AE274561E5008C33DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AC274561E5008C33DB /* SettingsView.swift */; };
+		D73117B027456236008C33DB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AF27456236008C33DB /* DiaryView.swift */; };
+		D73117B127456236008C33DB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AF27456236008C33DB /* DiaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,11 @@
 		D72E463B274508A80065C25F /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72E463F274508A80065C25F /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		D72E4641274508A80065C25F /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		D73117A327455DE7008C33DB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D73117A627456185008C33DB /* PetStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetStatsView.swift; sourceTree = "<group>"; };
+		D73117A9274561AF008C33DB /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		D73117AC274561E5008C33DB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D73117AF27456236008C33DB /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +122,11 @@
 				D72E461C274508A60065C25F /* ContentView.swift */,
 				97FA8C93274519F2007F3084 /* ChoosePetView.swift */,
 				BA32AA5E27452324002FDECB /* PetCardView.swift */,
+				D73117A327455DE7008C33DB /* Home.swift */,
+				D73117AF27456236008C33DB /* DiaryView.swift */,
+				D73117AC274561E5008C33DB /* SettingsView.swift */,
+				D73117A9274561AF008C33DB /* ActivitiesView.swift */,
+				D73117A627456185008C33DB /* PetStatsView.swift */,
 				D72E461D274508A80065C25F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -308,8 +328,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72E4645274508A90065C25F /* ContentView.swift in Sources */,
+				D73117AD274561E5008C33DB /* SettingsView.swift in Sources */,
 				D72E4643274508A90065C25F /* QuteApp.swift in Sources */,
+				D73117A427455DE7008C33DB /* Home.swift in Sources */,
 				BA32AA5F27452324002FDECB /* PetCardView.swift in Sources */,
+				D73117B027456236008C33DB /* DiaryView.swift in Sources */,
+				D73117A727456185008C33DB /* PetStatsView.swift in Sources */,
+				D73117AA274561AF008C33DB /* ActivitiesView.swift in Sources */,
 				97FA8C94274519F2007F3084 /* ChoosePetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,8 +344,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72E4646274508A90065C25F /* ContentView.swift in Sources */,
+				D73117AE274561E5008C33DB /* SettingsView.swift in Sources */,
 				D72E4644274508A90065C25F /* QuteApp.swift in Sources */,
+				D73117A527455DE7008C33DB /* Home.swift in Sources */,
 				BA32AA6027452327002FDECB /* PetCardView.swift in Sources */,
+				D73117B127456236008C33DB /* DiaryView.swift in Sources */,
+				D73117A827456185008C33DB /* PetStatsView.swift in Sources */,
+				D73117AB274561AF008C33DB /* ActivitiesView.swift in Sources */,
 				97FA8C95274519F2007F3084 /* ChoosePetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -506,6 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

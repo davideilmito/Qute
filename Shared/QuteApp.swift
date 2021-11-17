@@ -12,7 +12,7 @@ import SwiftUI
 struct QuteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
