@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		97FA8C94274519F2007F3084 /* ChoosePetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FA8C93274519F2007F3084 /* ChoosePetView.swift */; };
 		97FA8C95274519F2007F3084 /* ChoosePetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FA8C93274519F2007F3084 /* ChoosePetView.swift */; };
+		BA32AA5F27452324002FDECB /* PetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA32AA5E27452324002FDECB /* PetCardView.swift */; };
+		BA32AA6027452327002FDECB /* PetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA32AA5E27452324002FDECB /* PetCardView.swift */; };
 		D72E4634274508A80065C25F /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E4633274508A80065C25F /* Tests_iOS.swift */; };
 		D72E4636274508A80065C25F /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E4635274508A80065C25F /* Tests_iOSLaunchTests.swift */; };
 		D72E4640274508A80065C25F /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E463F274508A80065C25F /* Tests_macOS.swift */; };
@@ -40,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		97FA8C93274519F2007F3084 /* ChoosePetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePetView.swift; sourceTree = "<group>"; };
+		BA32AA5E27452324002FDECB /* PetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCardView.swift; sourceTree = "<group>"; };
 		D72E461B274508A60065C25F /* QuteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuteApp.swift; sourceTree = "<group>"; };
 		D72E461C274508A60065C25F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D72E461D274508A80065C25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 				D72E461B274508A60065C25F /* QuteApp.swift */,
 				D72E461C274508A60065C25F /* ContentView.swift */,
 				97FA8C93274519F2007F3084 /* ChoosePetView.swift */,
+				BA32AA5E27452324002FDECB /* PetCardView.swift */,
 				D72E461D274508A80065C25F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -305,6 +309,7 @@
 			files = (
 				D72E4645274508A90065C25F /* ContentView.swift in Sources */,
 				D72E4643274508A90065C25F /* QuteApp.swift in Sources */,
+				BA32AA5F27452324002FDECB /* PetCardView.swift in Sources */,
 				97FA8C94274519F2007F3084 /* ChoosePetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +320,7 @@
 			files = (
 				D72E4646274508A90065C25F /* ContentView.swift in Sources */,
 				D72E4644274508A90065C25F /* QuteApp.swift in Sources */,
+				BA32AA6027452327002FDECB /* PetCardView.swift in Sources */,
 				97FA8C95274519F2007F3084 /* ChoosePetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
