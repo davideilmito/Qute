@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-//caccapupu
-
-//dyctfghvjbklnm
-
-//Miao
 
 @main
 struct QuteApp: App {
