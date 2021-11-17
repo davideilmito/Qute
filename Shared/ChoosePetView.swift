@@ -23,14 +23,14 @@ struct ChoosePetView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 355, height: 240)
-                .overlay(RoundedRectangle(cornerRadius: 60).stroke(.purple,lineWidth: 6))
+                .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                 
                 Text ("Dog")
                     .bold()
                     .font(.system(size: 35, design: .rounded))
                     .padding(.top,180)
                     
-                    .foregroundColor(.purple)
+                    .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
             }
             Spacer()
             
@@ -39,14 +39,14 @@ struct ChoosePetView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 355, height: 240)
-                .overlay(RoundedRectangle(cornerRadius: 60).stroke(.purple,lineWidth: 6))
+                .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                 
                 Text ("Cat")
                     .bold()
                     .font(.system(size: 35, design: .rounded))
                     .padding(.top,180)
                     
-                    .foregroundColor(.purple)
+                    .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
             }
             Spacer()
     }
