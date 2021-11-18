@@ -21,7 +21,9 @@ struct ActivitiesView: View {
         NavigationView{
             
             VStack{
-                                
+                   
+                
+                
                 
             }.navigationTitle("Activities")
             
