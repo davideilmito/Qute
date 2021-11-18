@@ -21,7 +21,7 @@ NavigationView{
                         HStack{
                             VStack{
                                 
-                            Image ("Doggo")
+                            Image ("Doggo1")
                                 .resizable()
                                 .frame(width: 320, height: 350)
                                 .aspectRatio(contentMode: .fit)
@@ -44,7 +44,7 @@ NavigationView{
                             
                             VStack{
                             
-                            Image ("Doggo1")
+                            Image ("Doggo")
                                 .resizable()
                                 .frame(width: 320, height: 350)
                                 .aspectRatio(contentMode: .fit)
