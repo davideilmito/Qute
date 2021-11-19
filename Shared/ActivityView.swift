@@ -9,17 +9,21 @@ import SwiftUI
 import Foundation
 
 
-struct HorizontalCategoryView: View {
+
+
+struct HorizCategoryView: View {
 
     @Binding var showModal: Bool
+ 
     var activitiesArray: [Activity]
     var type: ActivityCategory
+    @Binding var activityGesture: Activity
     
     
     var body: some View {
         
         
-        ScrollView(.horizontal){
+        ScrollView(.horizontal,showsIndicators: false){
         
             
         HStack(){
@@ -33,6 +37,8 @@ struct HorizontalCategoryView: View {
                     
                     Button {
                         
+                        activityGesture = activity
+                
                         showModal.toggle()
                         
                         
@@ -46,9 +52,7 @@ struct HorizontalCategoryView: View {
                         .frame(width: 134  , height: 134)
         
                 
-                }.sheet(isPresented: $showModal, content: {
-                    ModelView(showModal: $showModal, activity:activity)
-                                })
+                }
                 
             }
             
@@ -57,32 +61,32 @@ struct HorizontalCategoryView: View {
         }
         }
         
-        
-
-
+    
     }
 }
     
 
-struct ActivitiesView: View {
+struct ActivityView: View {
     
     @State private var showModal = false
+    @State private var activityGesture = Activity()
+    var rand : Int
+    
+    
     
     var activityStruct : ActivitiesStore
-    let rand : Int
+    
     init(){
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.init(Color(red: 143/255, green: 149/255, blue: 211/255))]
         
         self.activityStruct = ActivitiesStore()
-        self.rand = Int.random(in: 0...(activityStruct.activities.count-1))
+        self.rand = Int.random(in: 0...activityStruct.activities.count-1)
         
     }
     
     var body: some View {
             
-NavigationView{
-            
-        ScrollView(.vertical){
+        ScrollView(.vertical, showsIndicators: false){
           
             VStack{
                    
@@ -93,27 +97,31 @@ NavigationView{
                     .font(.system(size: 28, weight:.light, design: .rounded))
                     .frame(width: 358, height: 50, alignment: .leading)
                 
-//                CHECK GENERARE NUMERO RANDOMICO BASATO SU SEED
-
-                
+//        CHECK GENERARE NUMERO RANDOMICO BASATO SU SEED
+//
+//                DailyActivityView(showModal: $showModal, activity: $activityGesture, activitiesArray: activityStruct.activities, index: rand)
+//,
+//
+  
                 Button {
+                    
+                    
+                    activityGesture = activityStruct.activities[rand]
+                    
                     
                     showModal.toggle()
                     
                     
                 } label: {
                 
-            Image(activityStruct.activities[rand].image)
+                    Image(activityStruct.activities[rand].image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .scaledToFit()
                     .frame(width: 367, height: 268)
                     
                 }
-                .sheet(isPresented: $showModal, content: {
-                    ModelView(showModal: $showModal, activity:activityStruct.activities[rand])
-                                })
-
+                
                 
                 
                 
@@ -122,7 +130,7 @@ NavigationView{
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
                     .frame(width: 358, height: 50, alignment: .leading)
                 
-                HorizontalCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .relax)
+                HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .relax,activityGesture: $activityGesture)
                     
                 
 //            FUN HORIZONTAL STACK          //
@@ -130,7 +138,7 @@ NavigationView{
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
                     .frame(width: 358, height: 50, alignment: .leading)
                 
-                HorizontalCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .fun)
+                HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .fun,activityGesture: $activityGesture)
                 
                 
                 
@@ -141,27 +149,29 @@ NavigationView{
                     .frame(width: 358, height: 50, alignment: .leading)
                 
                 
-                HorizontalCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .cuddle)
+                HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .cuddle,activityGesture: $activityGesture)
                 
             
                     
            }
                 
            
-          }.navigationTitle("Activities")
+        }.navigationTitle("Activities")
+            .sheet(isPresented: $showModal, content: {
+            ModelView(showModal: $showModal, activity:activityGesture)})
               
         }
         
 }
 
-}
 
 
 
 
     
-struct ActivitiesView_Previews: PreviewProvider {
+struct ActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivitiesView()
+        ActivityView()
     }
 }
+

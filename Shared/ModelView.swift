@@ -10,7 +10,7 @@ import SwiftUI
 struct ModelView: View {
     
     @Binding var showModal: Bool
-    var activity: Activity
+    @State var activity: Activity = Activity(image: "Relax1", type: .none, name: "Caca")
     
     var body: some View {
         

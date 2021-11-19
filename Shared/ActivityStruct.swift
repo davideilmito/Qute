@@ -47,6 +47,11 @@ struct Activity:Identifiable{
         self.name=name
         
     }
+    init(){
+        
+        
+        
+    }
 
     
 

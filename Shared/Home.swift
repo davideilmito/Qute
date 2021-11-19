@@ -16,7 +16,7 @@ struct HomeView: View {
         
         TabView{
             
-                ActivitiesView()
+                ActivityView()
             
                 .tabItem{
                     Label("Activities",systemImage: "square.grid.2x2.fill")

@@ -18,7 +18,8 @@ struct ActivitiesStore {
     let activityRelax1 = Activity(image: "Relax1", type: .relax,name: "Activityrelax1")
     let activityRelax2 = Activity(image: "Relax2", type: .relax,name: "Activityrelax2")
     let activityRelax3 = Activity(image: "Relax3", type: .relax,name: "Activityrelax3")
-   
+    
+    
 //    FUN ACTIVITIES
     
     let activityFun1 = Activity(image: "Fun1", type: .fun,name: "ActivityFun1")
