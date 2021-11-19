@@ -31,6 +31,12 @@
 		D73117AE274561E5008C33DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AC274561E5008C33DB /* SettingsView.swift */; };
 		D73117B027456236008C33DB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AF27456236008C33DB /* DiaryView.swift */; };
 		D73117B127456236008C33DB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117AF27456236008C33DB /* DiaryView.swift */; };
+		D7320F772746C9CB00779CD4 /* ActivityStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F762746C9CB00779CD4 /* ActivityStruct.swift */; };
+		D7320F782746C9CB00779CD4 /* ActivityStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F762746C9CB00779CD4 /* ActivityStruct.swift */; };
+		D7320F7A2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */; };
+		D7320F7B2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */; };
+		D7320F832746F61C00779CD4 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F822746F61C00779CD4 /* ModelView.swift */; };
+		D7320F842746F61C00779CD4 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F822746F61C00779CD4 /* ModelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,9 @@
 		D73117A9274561AF008C33DB /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		D73117AC274561E5008C33DB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D73117AF27456236008C33DB /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		D7320F762746C9CB00779CD4 /* ActivityStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityStruct.swift; sourceTree = "<group>"; };
+		D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStruct.swift; sourceTree = "<group>"; };
+		D7320F822746F61C00779CD4 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +128,16 @@
 			isa = PBXGroup;
 			children = (
 				D72E461B274508A60065C25F /* QuteApp.swift */,
+				D7320F762746C9CB00779CD4 /* ActivityStruct.swift */,
 				D72E461C274508A60065C25F /* ContentView.swift */,
 				97FA8C93274519F2007F3084 /* ChoosePetView.swift */,
 				BA32AA5E27452324002FDECB /* PetCardView.swift */,
 				D73117A327455DE7008C33DB /* Home.swift */,
+				D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */,
 				D73117AF27456236008C33DB /* DiaryView.swift */,
 				D73117AC274561E5008C33DB /* SettingsView.swift */,
 				D73117A9274561AF008C33DB /* ActivitiesView.swift */,
+				D7320F822746F61C00779CD4 /* ModelView.swift */,
 				D73117A627456185008C33DB /* PetStatsView.swift */,
 				D72E461D274508A80065C25F /* Assets.xcassets */,
 			);
@@ -330,7 +342,10 @@
 				D72E4645274508A90065C25F /* ContentView.swift in Sources */,
 				D73117AD274561E5008C33DB /* SettingsView.swift in Sources */,
 				D72E4643274508A90065C25F /* QuteApp.swift in Sources */,
+				D7320F772746C9CB00779CD4 /* ActivityStruct.swift in Sources */,
+				D7320F7A2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */,
 				D73117A427455DE7008C33DB /* Home.swift in Sources */,
+				D7320F832746F61C00779CD4 /* ModelView.swift in Sources */,
 				BA32AA5F27452324002FDECB /* PetCardView.swift in Sources */,
 				D73117B027456236008C33DB /* DiaryView.swift in Sources */,
 				D73117A727456185008C33DB /* PetStatsView.swift in Sources */,
@@ -346,7 +361,10 @@
 				D72E4646274508A90065C25F /* ContentView.swift in Sources */,
 				D73117AE274561E5008C33DB /* SettingsView.swift in Sources */,
 				D72E4644274508A90065C25F /* QuteApp.swift in Sources */,
+				D7320F782746C9CB00779CD4 /* ActivityStruct.swift in Sources */,
+				D7320F7B2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */,
 				D73117A527455DE7008C33DB /* Home.swift in Sources */,
+				D7320F842746F61C00779CD4 /* ModelView.swift in Sources */,
 				BA32AA6027452327002FDECB /* PetCardView.swift in Sources */,
 				D73117B127456236008C33DB /* DiaryView.swift in Sources */,
 				D73117A827456185008C33DB /* PetStatsView.swift in Sources */,
