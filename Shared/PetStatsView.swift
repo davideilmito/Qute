@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PetStatsView: View {
     
+    @EnvironmentObject var personalPet: Pet
+    
     init(){
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.init(Color(red: 143/255, green: 149/255, blue: 211/255))]
     }
@@ -29,7 +31,7 @@ NavigationView{
                                 .overlay(Circle().stroke (Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                                 .padding(.leading,25)
                         
-                            Text ("25%")
+                                Text ("\(personalPet.happiness)%")
                                     
                                     .font(.system(size: 72, weight: .heavy,design: .rounded))
                                     .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
@@ -53,7 +55,7 @@ NavigationView{
                                 .overlay(Circle().stroke (Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                                 .padding(.leading,25)
                             
-                                Text ("50%")
+                                Text ("\(personalPet.relax)%")
                                         
                                         .font(.system(size: 72, weight: .heavy,design: .rounded))
                                         .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
@@ -75,7 +77,7 @@ NavigationView{
                                 .overlay(Circle().stroke (Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                                 .padding(.leading,25)
                             
-                                Text ("75%")
+                                Text ("\(personalPet.attachment)%")
                                         
                                         .font(.system(size: 72, weight: .heavy,design: .rounded))
                                         .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
@@ -104,6 +106,6 @@ NavigationView{
 
 struct PetStatsView_Previews: PreviewProvider {
     static var previews: some View {
-        PetStatsView()
+        PetStatsView().environmentObject(Pet(happiness: Int.random(in: 0...100), attachment: Int.random(in:0...100), relax: Int.random(in: 0...100)))
     }
 }

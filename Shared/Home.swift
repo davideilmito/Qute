@@ -12,6 +12,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+   
     var body: some View {
         
         TabView{
@@ -50,6 +51,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(Pet(happiness: Int.random(in: 0...100), attachment: Int.random(in:0...100), relax: Int.random(in: 0...100)))
     }
 }

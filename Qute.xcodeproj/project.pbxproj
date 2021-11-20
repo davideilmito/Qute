@@ -17,8 +17,6 @@
 		D72E4642274508A80065C25F /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E4641274508A80065C25F /* Tests_macOSLaunchTests.swift */; };
 		D72E4643274508A90065C25F /* QuteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E461B274508A60065C25F /* QuteApp.swift */; };
 		D72E4644274508A90065C25F /* QuteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E461B274508A60065C25F /* QuteApp.swift */; };
-		D72E4645274508A90065C25F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E461C274508A60065C25F /* ContentView.swift */; };
-		D72E4646274508A90065C25F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E461C274508A60065C25F /* ContentView.swift */; };
 		D72E4647274508A90065C25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72E461D274508A80065C25F /* Assets.xcassets */; };
 		D72E4648274508A90065C25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72E461D274508A80065C25F /* Assets.xcassets */; };
 		D73117A427455DE7008C33DB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73117A327455DE7008C33DB /* Home.swift */; };
@@ -37,6 +35,8 @@
 		D7320F842746F61C00779CD4 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F822746F61C00779CD4 /* ModelView.swift */; };
 		D7460C442748FCC200EE7390 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7460C432748FCC200EE7390 /* TimerView.swift */; };
 		D7460C452748FCC200EE7390 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7460C432748FCC200EE7390 /* TimerView.swift */; };
+		D7460C4727491CD100EE7390 /* PetStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7460C4627491CD100EE7390 /* PetStruct.swift */; };
+		D7460C4827491CD100EE7390 /* PetStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7460C4627491CD100EE7390 /* PetStruct.swift */; };
 		D74DD8C52747A6360063E558 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD8C42747A6360063E558 /* ActivityView.swift */; };
 		D74DD8C62747A6360063E558 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD8C42747A6360063E558 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,6 @@
 		97FA8C93274519F2007F3084 /* ChoosePetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePetView.swift; sourceTree = "<group>"; };
 		BA32AA5E27452324002FDECB /* PetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCardView.swift; sourceTree = "<group>"; };
 		D72E461B274508A60065C25F /* QuteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuteApp.swift; sourceTree = "<group>"; };
-		D72E461C274508A60065C25F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D72E461D274508A80065C25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D72E4622274508A80065C25F /* Qute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72E4628274508A80065C25F /* Qute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qute.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +80,7 @@
 		D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStruct.swift; sourceTree = "<group>"; };
 		D7320F822746F61C00779CD4 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		D7460C432748FCC200EE7390 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		D7460C4627491CD100EE7390 /* PetStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetStruct.swift; sourceTree = "<group>"; };
 		D74DD8C42747A6360063E558 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,6 @@
 			children = (
 				D72E461B274508A60065C25F /* QuteApp.swift */,
 				D7320F762746C9CB00779CD4 /* ActivityStruct.swift */,
-				D72E461C274508A60065C25F /* ContentView.swift */,
 				97FA8C93274519F2007F3084 /* ChoosePetView.swift */,
 				BA32AA5E27452324002FDECB /* PetCardView.swift */,
 				D73117A327455DE7008C33DB /* Home.swift */,
@@ -141,6 +140,7 @@
 				D73117AC274561E5008C33DB /* SettingsView.swift */,
 				D74DD8C42747A6360063E558 /* ActivityView.swift */,
 				D7320F822746F61C00779CD4 /* ModelView.swift */,
+				D7460C4627491CD100EE7390 /* PetStruct.swift */,
 				D7460C432748FCC200EE7390 /* TimerView.swift */,
 				D73117A627456185008C33DB /* PetStatsView.swift */,
 				D72E461D274508A80065C25F /* Assets.xcassets */,
@@ -343,7 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D72E4645274508A90065C25F /* ContentView.swift in Sources */,
 				D73117AD274561E5008C33DB /* SettingsView.swift in Sources */,
 				D74DD8C52747A6360063E558 /* ActivityView.swift in Sources */,
 				D72E4643274508A90065C25F /* QuteApp.swift in Sources */,
@@ -355,6 +354,7 @@
 				BA32AA5F27452324002FDECB /* PetCardView.swift in Sources */,
 				D73117B027456236008C33DB /* DiaryView.swift in Sources */,
 				D73117A727456185008C33DB /* PetStatsView.swift in Sources */,
+				D7460C4727491CD100EE7390 /* PetStruct.swift in Sources */,
 				97FA8C94274519F2007F3084 /* ChoosePetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D72E4646274508A90065C25F /* ContentView.swift in Sources */,
 				D73117AE274561E5008C33DB /* SettingsView.swift in Sources */,
 				D74DD8C62747A6360063E558 /* ActivityView.swift in Sources */,
 				D72E4644274508A90065C25F /* QuteApp.swift in Sources */,
@@ -375,6 +374,7 @@
 				BA32AA6027452327002FDECB /* PetCardView.swift in Sources */,
 				D73117B127456236008C33DB /* DiaryView.swift in Sources */,
 				D73117A827456185008C33DB /* PetStatsView.swift in Sources */,
+				D7460C4827491CD100EE7390 /* PetStruct.swift in Sources */,
 				97FA8C95274519F2007F3084 /* ChoosePetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

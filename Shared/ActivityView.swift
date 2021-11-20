@@ -77,6 +77,8 @@ struct ActivityView: View {
             
         
         NavigationView{
+            
+        
         
         ScrollView(.vertical, showsIndicators: false){
           
@@ -145,6 +147,7 @@ struct ActivityView: View {
            }
                 
            
+            
         }.navigationTitle("Activities")
                 .sheet(isPresented: $showModal, content: {
             ModelView(showModal: $showModal, activity: $activityGesture)})
