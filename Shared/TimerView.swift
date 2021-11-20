@@ -19,9 +19,16 @@ func convertSecondsToTime(timeInSeconds: Int) -> String{
 
 struct TimerView: View {
     
+    @EnvironmentObject var personalPet: Pet
+    
+    
     @State var timeRemaining : Int = 10
     
+    
     @Binding var playTimer : Bool
+    
+    @Binding var activity : Activity
+    
     
     let timer = Timer.publish(every: 1, on: .main, in:
                                     .common).autoconnect()
@@ -45,6 +52,24 @@ struct TimerView: View {
                     }
                     else if timeRemaining == 0 {
                         
+                        timeRemaining=activity.timer
+                        
+                        playTimer.toggle()
+                        
+                        switch activity.type{
+                            
+                        case .relax: personalPet.relax += 3
+                        
+                        case .fun: personalPet.happiness += 3
+                        
+                        case .cuddle: personalPet.attachment += 10
+                        
+                        case .none : personalPet.happiness += 10000
+                            
+                            
+                        
+                            
+                        }
                         
                         
                         
@@ -67,8 +92,12 @@ struct TimerView: View {
 
 
 struct TimerView_Previews: PreviewProvider {
+    
+    @State static var constantActivity = Activity(image: "Cuddle2", type: .cuddle,name: "ActivityCuddle2")
+    
+
     static var previews: some View {
-        TimerView(timeRemaining: 30, playTimer: .constant(false))
+        TimerView(timeRemaining: 30, playTimer: .constant(false),activity: $constantActivity)
             .preferredColorScheme(.dark)
     }
 }

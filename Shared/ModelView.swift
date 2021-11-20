@@ -27,7 +27,7 @@ struct ModelView: View {
                                 .aspectRatio(contentMode: .fit)
                             .scaledToFit()
                         
-                        TimerView(timeRemaining: activity.timer, playTimer: $playPause)
+                        TimerView(timeRemaining: activity.timer, playTimer: $playPause,activity: $activity)
                             .position(x: 60  , y: 40)
                             
                     }

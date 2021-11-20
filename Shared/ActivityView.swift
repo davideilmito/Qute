@@ -20,7 +20,7 @@ struct HorizCategoryView: View {
         
         ScrollView(.horizontal,showsIndicators: false){
         
-        HStack(){
+            HStack(){
             
             ForEach(activitiesArray){
                 
@@ -52,6 +52,7 @@ struct HorizCategoryView: View {
             
         }
         }
+            .padding(.leading, 16)
         }
         
     
