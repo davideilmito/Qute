@@ -9,23 +9,17 @@ import SwiftUI
 import Foundation
 
 
-
-
 struct HorizCategoryView: View {
 
     @Binding var showModal: Bool
- 
     var activitiesArray: [Activity]
     var type: ActivityCategory
     @Binding var activityGesture: Activity
     
-    
     var body: some View {
-        
         
         ScrollView(.horizontal,showsIndicators: false){
         
-            
         HStack(){
             
             ForEach(activitiesArray){
@@ -49,9 +43,8 @@ struct HorizCategoryView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .scaledToFit()
-                        .frame(width: 134  , height: 134)
-        
-                
+                        .frame(width: 180  , height: 180)
+                        
                 }
                 
             }
@@ -69,16 +62,12 @@ struct HorizCategoryView: View {
 struct ActivityView: View {
     
     @State private var showModal = false
-    @State private var activityGesture = Activity()
+    @State private var activityGesture = Activity(image: "", type: .relax, name: "")
     var rand : Int
-    
-    
-    
     var activityStruct : ActivitiesStore
     
-    init(){
+     init(){
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.init(Color(red: 143/255, green: 149/255, blue: 211/255))]
-        
         self.activityStruct = ActivitiesStore()
         self.rand = Int.random(in: 0...activityStruct.activities.count-1)
         
@@ -86,22 +75,23 @@ struct ActivityView: View {
     
     var body: some View {
             
+        
+        NavigationView{
+        
         ScrollView(.vertical, showsIndicators: false){
           
-            VStack{
+            VStack(spacing: 2){
                    
                 
 //          ACTIVITY OF THE DAY
-                Text("Let's do the activity of the day")
+                Text("Let's do the activity of the day!")
                     
                     .font(.system(size: 28, weight:.light, design: .rounded))
                     .frame(width: 358, height: 50, alignment: .leading)
                 
 //        CHECK GENERARE NUMERO RANDOMICO BASATO SU SEED
 //
-//                DailyActivityView(showModal: $showModal, activity: $activityGesture, activitiesArray: activityStruct.activities, index: rand)
-//,
-//
+
   
                 Button {
                     
@@ -151,21 +141,21 @@ struct ActivityView: View {
                 
                 HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .cuddle,activityGesture: $activityGesture)
                 
-            
                     
            }
                 
            
         }.navigationTitle("Activities")
-            .sheet(isPresented: $showModal, content: {
-            ModelView(showModal: $showModal, activity:activityGesture)})
-              
+                .sheet(isPresented: $showModal, content: {
+            ModelView(showModal: $showModal, activity: $activityGesture)})
+            
+            
+            
         }
         
 }
 
-
-
+}
 
 
     

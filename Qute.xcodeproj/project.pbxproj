@@ -35,6 +35,8 @@
 		D7320F7B2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */; };
 		D7320F832746F61C00779CD4 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F822746F61C00779CD4 /* ModelView.swift */; };
 		D7320F842746F61C00779CD4 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7320F822746F61C00779CD4 /* ModelView.swift */; };
+		D7460C442748FCC200EE7390 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7460C432748FCC200EE7390 /* TimerView.swift */; };
+		D7460C452748FCC200EE7390 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7460C432748FCC200EE7390 /* TimerView.swift */; };
 		D74DD8C52747A6360063E558 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD8C42747A6360063E558 /* ActivityView.swift */; };
 		D74DD8C62747A6360063E558 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD8C42747A6360063E558 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,7 @@
 		D7320F762746C9CB00779CD4 /* ActivityStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityStruct.swift; sourceTree = "<group>"; };
 		D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStruct.swift; sourceTree = "<group>"; };
 		D7320F822746F61C00779CD4 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		D7460C432748FCC200EE7390 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		D74DD8C42747A6360063E558 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,7 @@
 				D73117AC274561E5008C33DB /* SettingsView.swift */,
 				D74DD8C42747A6360063E558 /* ActivityView.swift */,
 				D7320F822746F61C00779CD4 /* ModelView.swift */,
+				D7460C432748FCC200EE7390 /* TimerView.swift */,
 				D73117A627456185008C33DB /* PetStatsView.swift */,
 				D72E461D274508A80065C25F /* Assets.xcassets */,
 			);
@@ -344,6 +348,7 @@
 				D74DD8C52747A6360063E558 /* ActivityView.swift in Sources */,
 				D72E4643274508A90065C25F /* QuteApp.swift in Sources */,
 				D7320F772746C9CB00779CD4 /* ActivityStruct.swift in Sources */,
+				D7460C442748FCC200EE7390 /* TimerView.swift in Sources */,
 				D7320F7A2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */,
 				D73117A427455DE7008C33DB /* Home.swift in Sources */,
 				D7320F832746F61C00779CD4 /* ModelView.swift in Sources */,
@@ -363,6 +368,7 @@
 				D74DD8C62747A6360063E558 /* ActivityView.swift in Sources */,
 				D72E4644274508A90065C25F /* QuteApp.swift in Sources */,
 				D7320F782746C9CB00779CD4 /* ActivityStruct.swift in Sources */,
+				D7460C452748FCC200EE7390 /* TimerView.swift in Sources */,
 				D7320F7B2746CD3D00779CD4 /* ActivitiesStruct.swift in Sources */,
 				D73117A527455DE7008C33DB /* Home.swift in Sources */,
 				D7320F842746F61C00779CD4 /* ModelView.swift in Sources */,
