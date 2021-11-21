@@ -42,8 +42,10 @@ struct HorizCategoryView: View {
                     Image(activity.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 40))
                         .scaledToFit()
-                        .frame(width: 180  , height: 180)
+                        .frame(width: 180  , height: 140)
+                        .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                         
                 }
                 
@@ -52,7 +54,7 @@ struct HorizCategoryView: View {
             
         }
         }
-            .padding(.leading, 16)
+            .padding([.top, .leading, .bottom], 16)
         }
         
     
@@ -111,7 +113,9 @@ struct ActivityView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .scaledToFit()
-                    .frame(width: 367, height: 268)
+                    .clipShape(RoundedRectangle(cornerRadius: 60))
+                    .frame(width: 340, height: 268)
+                    .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                     
                 }
                 
