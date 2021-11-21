@@ -72,7 +72,7 @@ struct ModelView: View {
                
             }.alert(isPresented: $end){
                 
-                Alert(title:Text( "🎉 Good job!"), message: Text("Your pet earned \(activity.points) points in the  \(activity.type.returnString().lowercased()) stat."), dismissButton: .default(Text("Ok")))
+                Alert(title:Text( "🎉 Good job!"), message: Text("Your pet earned \(activity.points) points in the  \(activity.type.getPetStat().lowercased()) stat."), dismissButton: .default(Text("Ok")))
                 
             }
            
