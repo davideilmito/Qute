@@ -15,6 +15,23 @@ enum ActivityCategory :Equatable{
     case cuddle
     case none
     
+    
+    func returnString()->String{
+        
+        switch self{
+            
+        case.relax:
+            return "Relax"
+        case .cuddle:
+            return "Cuddle"
+        case .fun:
+            return "Fun"
+        case .none:
+            return "None"
+            
+        }
+        
+    }
 
 }
 
@@ -28,7 +45,9 @@ struct Activity:Identifiable{
     var descripton: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     var timer : Int = 10
     var name: String = "Dummy Activity"
-
+    var points : Int = 3
+    
+    
     init(image: String,type: ActivityCategory,description: String,timer : Int,name: String){
         
         self.image=image
