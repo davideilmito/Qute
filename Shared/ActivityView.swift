@@ -84,7 +84,6 @@ struct ActivityView: View {
         
         
         ScrollView(.vertical, showsIndicators: false){
-          
             VStack(spacing: 2){
                    
                 
@@ -111,13 +110,13 @@ struct ActivityView: View {
                 
                     Image(activityStruct.activities[rand].image)
                     .resizable()
-                    .frame(width: 385, height: 268)
+                    .frame(width: 350, height: 268)
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 60))
                     
-                    .scaledToFill()
+                    .scaledToFit()
                     .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
-                    .padding()
+                   // .padding()
                 }
                 
                 
@@ -136,6 +135,7 @@ struct ActivityView: View {
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
                     .frame(width: 358, height: 50, alignment: .leading)
                 
+                
                 HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .fun,activityGesture: $activityGesture)
                 
                 
@@ -150,7 +150,8 @@ struct ActivityView: View {
                 HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .cuddle,activityGesture: $activityGesture)
                 
                     
-           }
+            }
+        
                 
            
             
