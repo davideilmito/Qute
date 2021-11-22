@@ -111,12 +111,13 @@ struct ActivityView: View {
                 
                     Image(activityStruct.activities[rand].image)
                     .resizable()
+                    .frame(width: 385, height: 268)
                     .aspectRatio(contentMode: .fit)
-                    .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 60))
-                    .frame(width: 340, height: 268)
-                    .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                     
+                    .scaledToFill()
+                    .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
+                    .padding()
                 }
                 
                 
