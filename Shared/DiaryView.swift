@@ -16,6 +16,11 @@ struct DiaryView: View {
     
     @State var isRaised: Bool = false
     @State var caneRaised: String = "cane 2"
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedObject var diary = DiaryDog.shared
+    @State private var imagee: Image? = Image("")
+    @State private var image: UIImage?
+    @State private var isPresented: Bool = false
     
     init(){
         
@@ -59,40 +64,60 @@ struct DiaryView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: (UIScreen.main.bounds.width - 32) / 3, height: 115)
-                                        .cornerRadius(25)
+                                        .cornerRadius(5)
                                         .onTapGesture {
                                             caneRaised = cane
                                             isRaised = true
+                                            
                                         }
+                                    imagee?
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: (UIScreen.main.bounds.width - 32) / 3, height: 115)
+                                        .cornerRadius(5)
+                                    
                                 }
                             }
                         }
                     }
                 }.navigationBarItems(trailing:
                                         HStack {
-//                    NavigationLink(destination: HomeView()){
+                    Button(action: {
+                        self.isPresented = true
+                        
+                    }) {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 20, weight: .bold))
                             .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
-                            .onTapGesture {
-            
-                            }
-//                    }
+                    }
+                    .sheet(isPresented: $isPresented, onDismiss: {
+                        self.isPresented = false
+                        if let img = self.image {
+                            self.imagee = Image(uiImage: img)
+                        }
+                        
+                    }) {
+                        ImagePicker(image: self.$image, pickerType: UIImagePickerController.SourceType.photoLibrary)
+                    }
+                    
                     .navigationBarItems(trailing: EditButton())
                     
                 }).navigationTitle("Diary")
                     .sheet(isPresented: $isRaised, onDismiss: {}) {
                         Image(caneRaised)
                     }
+                
+                
             }
         }
     }
 }
-    
-    struct DiaryView_Previews: PreviewProvider {
-        static var previews: some View {
-            DiaryView()
-        }
+
+struct DiaryView_Previews: PreviewProvider {
+    static var previews: some View {
+        DiaryView()
     }
-    
-    
+}
+
+
+
