@@ -60,15 +60,15 @@ struct TimerView: View {
                             
                             
                         case .relax:
-                                personalPet.relax += 3
+                            personalPet.relax += activity.points
                                 personalPet.relax = personalPet.relax > 100 ? 100 : personalPet.relax
                         
                         
-                        case .fun: personalPet.happiness += 3
+                        case .fun: personalPet.happiness += activity.points
                        
                             personalPet.happiness = personalPet.happiness > 100 ? 100 : personalPet.happiness
                        
-                      case .cuddle: personalPet.attachment += 10
+                        case .cuddle: personalPet.attachment += activity.points
                  
                         personalPet.attachment = personalPet.attachment > 100 ? 100 : personalPet.attachment
                        

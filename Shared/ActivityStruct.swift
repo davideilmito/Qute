@@ -16,16 +16,16 @@ enum ActivityCategory :Equatable{
     case none
     
     
-    func returnString()->String{
+    func getPetStat()->String{
         
         switch self{
             
         case.relax:
             return "Relax"
         case .cuddle:
-            return "Cuddle"
+            return "Attachment"
         case .fun:
-            return "Fun"
+            return "Happiness"
         case .none:
             return "None"
             
