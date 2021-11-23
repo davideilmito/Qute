@@ -20,10 +20,9 @@ class Pet: ObservableObject{
         self.attachment = attachment
         self.happiness = happiness
         
+        
+        
     }
-    
-    
-   
     
 }
 

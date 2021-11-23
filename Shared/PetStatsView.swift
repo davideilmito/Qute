@@ -24,14 +24,15 @@ NavigationView{
                         HStack{
                             VStack{
                                 
+                                
                             Image ("Doggo1")
                                 .resizable()
                                 .frame(width: 320, height: 350)
                                 .aspectRatio(contentMode: .fit)
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke (Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
-                                .padding(.leading,25)
-                        
+                               
+                                
                                 Text ("\(personalPet.happiness)%")
                                     
                                     .font(.system(size: 72, weight: .heavy,design: .rounded))
@@ -43,7 +44,8 @@ NavigationView{
                                 
                                 .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
                             
-                            }
+                        
+                        }
                             
                             VStack{
                             
@@ -54,7 +56,7 @@ NavigationView{
                                 
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke (Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
-                                .padding(.leading,25)
+                                
                             
                                 Text ("\(personalPet.relax)%")
                                         
@@ -76,23 +78,26 @@ NavigationView{
                                 
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke (Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
-                                .padding(.leading,25)
+                               
                             
                                 Text ("\(personalPet.attachment)%")
                                         
                                         .font(.system(size: 72, weight: .heavy,design: .rounded))
                                         .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
                                 
+                                
                             Text ("Attachment")
                                 
                                 .font(.system(size: 35,weight: .light, design: .rounded))
                                 
                                 .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
+                            
                             }
                             
-                        }
-                        Spacer()
-                    }
+                        
+                        }.padding()
+                        
+    }
             
                 
  }.navigationTitle("Pet Stats")
