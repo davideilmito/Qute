@@ -50,8 +50,11 @@ struct ModelView: View {
                     }
                             Text(activity.descripton)
                             .font(.system(size: 23, weight:.light, design: .rounded))
+                            
                             .padding()
                             
+                    
+                    
                 }
                 Button(action: {
                      

@@ -33,6 +33,7 @@ struct PetCardView: View {
                     .cornerRadius(58)
                     .background(Color(red: 143/255, green: 149/255, blue: 211/255))
                     .foregroundColor(.white)
+            
             }
         }
     }

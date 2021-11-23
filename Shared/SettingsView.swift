@@ -13,7 +13,6 @@ struct SettingsView: View {
         
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.init(Color(red: 143/255, green: 149/255, blue: 211/255))]
         
-        
     }
     
     
