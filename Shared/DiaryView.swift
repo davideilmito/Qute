@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DiaryView: View {
-    var cani: [[String]] = [
-        ["cane 2", "cane 3", "cane 4"],
-        ["cane 5", "cane 6", "cane 7"],
-        ["cane 8", "cane 9", "cane 10"]
+    @State var cani: [[UIImage]] = [
+        [UIImage(imageLiteralResourceName: "cane 2"), UIImage(imageLiteralResourceName: "cane 3"), UIImage(imageLiteralResourceName: "cane 4")],
+        [UIImage(imageLiteralResourceName: "cane 5"), UIImage(imageLiteralResourceName: "cane 6"), UIImage(imageLiteralResourceName: "cane 7")],
+        [UIImage(imageLiteralResourceName: "cane 8"), UIImage(imageLiteralResourceName: "cane 9"), UIImage(imageLiteralResourceName: "cane 10")]
     ]
     
     @State var isRaised: Bool = false
-    @State var caneRaised: String = "cane 2"
+    @State var caneRaised: UIImage = UIImage(imageLiteralResourceName: "cane 2")
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var diary = DiaryDog.shared
     @State private var imagee: Image? = Image("")
@@ -39,14 +39,14 @@ struct DiaryView: View {
                     Text("Take trace of your emotions, feelings and progress.")
                         .font(.system(size: 28, weight: .light, design: .rounded))
                         .frame(width: 358, height: 70, alignment: .leading)
-                    Spacer()
+                    
                     Text ("Memories")
                         .font(.system(size: 28, weight: .bold, design: .rounded))
-                        .frame(width: 358, height: 70, alignment: .leading)
+                        .frame(width: 358, height: 40, alignment: .leading)
                     
                     Image("cane 1")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
                         .frame(width: 370, height: 180)
                         .cornerRadius(25)
                         .padding()
@@ -56,11 +56,15 @@ struct DiaryView: View {
                                 .cornerRadius(10)
                                 .opacity(0)
                         )
+                        .onTapGesture {
+                           isRaised=true
+                            caneRaised = UIImage(imageLiteralResourceName: "cane 1")
+                        }
                     VStack(alignment: .leading) {
                         ForEach(cani, id: \.self) { cols in
                             HStack {
                                 ForEach(cols, id: \.self) { cane in
-                                    Image(cane)
+                                    Image(uiImage: cane)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: (UIScreen.main.bounds.width - 32) / 3, height: 115)
@@ -68,14 +72,13 @@ struct DiaryView: View {
                                         .onTapGesture {
                                             caneRaised = cane
                                             isRaised = true
-                                            
                                         }
-                                    imagee?
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: (UIScreen.main.bounds.width - 32) / 3, height: 115)
-                                        .cornerRadius(5)
-                                    
+//                                    imagee?
+//                                        .resizable()
+//                                        .aspectRatio(contentMode: .fill)
+//                                        .frame(width: (UIScreen.main.bounds.width - 32) / 3, height: 115)
+//                                        .cornerRadius(5)
+//
                                 }
                             }
                         }
@@ -93,7 +96,12 @@ struct DiaryView: View {
                     .sheet(isPresented: $isPresented, onDismiss: {
                         self.isPresented = false
                         if let img = self.image {
-                            self.imagee = Image(uiImage: img)
+//                            self.imagee = Image(uiImage: img)
+                            if cani[cani.count - 1].count % 3 == 0 {
+                                cani.append([img])
+                            } else {
+                                cani[cani.count - 1].append(img)
+                            }
                         }
                         
                     }) {
@@ -104,7 +112,10 @@ struct DiaryView: View {
                     
                 }).navigationTitle("Diary")
                     .sheet(isPresented: $isRaised, onDismiss: {}) {
-                        Image(caneRaised)
+                        Image(uiImage: caneRaised)
+                            .resizable()
+                            .scaledToFit()
+                        
                     }
                 
                 
