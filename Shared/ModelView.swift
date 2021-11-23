@@ -30,7 +30,7 @@ struct ModelView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 60))
+                            
                         
                         Group{
                             

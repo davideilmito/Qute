@@ -48,14 +48,14 @@ struct Activity:Identifiable{
     var points : Int = 3
     
     
-    init(image: String,type: ActivityCategory,description: String,timer : Int,name: String){
+    init(image: String,type: ActivityCategory,description: String,timer : Int,name: String,points : Int){
         
         self.image=image
         self.type=type
         self.descripton=description
         self.timer=timer
         self.name=name
-        
+        self.points=points
         
     }
 
