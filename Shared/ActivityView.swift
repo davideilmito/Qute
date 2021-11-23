@@ -139,7 +139,6 @@ struct ActivityView: View {
                 
                 
                 
-                
 //            CUDDLE HORIZONTAL STACK          //
                 Text("Cuddle")
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
@@ -151,14 +150,10 @@ struct ActivityView: View {
                     
             }
         
-                
-           
             
         }.navigationTitle("Activities")
                 .sheet(isPresented: $showModal, content: {
             ModelView(showModal: $showModal, activity: $activityGesture)})
-            
-            
             
         }
         

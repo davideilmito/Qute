@@ -30,7 +30,7 @@ struct ModelView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 60))
+                            
                         
                         Group{
                             
@@ -50,8 +50,11 @@ struct ModelView: View {
                     }
                             Text(activity.descripton)
                             .font(.system(size: 23, weight:.light, design: .rounded))
+                            
                             .padding()
                             
+                    
+                    
                 }
                 Button(action: {
                      
