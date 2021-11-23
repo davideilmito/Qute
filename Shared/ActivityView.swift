@@ -92,11 +92,10 @@ struct ActivityView: View {
                     
                     .font(.system(size: 28, weight:.light, design: .rounded))
                     .frame(width: 358, height: 50, alignment: .leading)
+                    .padding()
                 
 //        CHECK GENERARE NUMERO RANDOMICO BASATO SU SEED
 //
-
-  
                 Button {
                     
                     
