@@ -31,7 +31,6 @@ struct HomeView: View {
                 
                 }
             
-            
                 PetStatsView()
             
                 .tabItem{
@@ -68,21 +67,22 @@ struct OnboardingView: View{
     
     @Binding var showOnBoarding : Bool
     
+    
     var body: some View{
         
         
         TabView{
             
-           PageView(title: "Create a bond", subtitle: "Develop a relationship with your dog", imageName: "pawprint.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding)
+           PageView(title: "Qute", subtitle: "Qute will help you to build an healthy reletionship  with your dog.", imageName: "Qute",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: false)
               
 
-            PageView(title: "Make the dog happier", subtitle: "Become a better owner for your pet", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding)
+            PageView(title: "Take care of your virtual pet", subtitle: "Keep under control his three stats: happiness,relax and attachment.", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
                 
 
-            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities", imageName: "sun.haze.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding)
+            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities to do with your dog", imageName: "sun.haze.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
                
 
-            PageView(title: "Have fun!", subtitle: "Experience the joy of living and playing with your dog", imageName: "face.smiling",showDismissedButton: true,showOnBoarding: $showOnBoarding)
+            PageView(title: "Have fun!", subtitle: "Experience the joy of living and playing with your dog.", imageName: "face.smiling",showDismissedButton: true,showOnBoarding: $showOnBoarding,systemImage: true)
                
             
         } // TabView
@@ -101,21 +101,34 @@ struct PageView: View {
     let imageName: String
     let showDismissedButton: Bool
     @Binding var showOnBoarding : Bool
+    let systemImage : Bool
     
     var body: some View{
-        
-        
         
         VStack{
             
             
-            Image(systemName: imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150)
-                .padding()
-                .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
+            if systemImage{
                 
+                
+                Image(systemName: imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150)
+                    .padding()
+                    .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
+                    
+                
+            }else {Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150)
+                    .padding()
+                    .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
+            }
+                
+                
+           
                 
                 
             
