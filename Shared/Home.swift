@@ -73,16 +73,16 @@ struct OnboardingView: View{
         
         TabView{
             
-           PageView(title: "Primo", subtitle: "Sottotitolo", imageName: "pawprint.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding)
+           PageView(title: "Create a bond", subtitle: "Develop a relationship with your dog", imageName: "pawprint.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding)
               
 
-            PageView(title: "Secondo", subtitle: "Sottotitolo", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding)
+            PageView(title: "Make the dog happier", subtitle: "Become a better owner for your pet", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding)
                 
 
-            PageView(title: "Terzo", subtitle: "Sottotitolo", imageName: "bookmark",showDismissedButton: false,showOnBoarding: $showOnBoarding)
+            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities", imageName: "bookmark",showDismissedButton: false,showOnBoarding: $showOnBoarding)
                
 
-            PageView(title: "Quarto", subtitle: "Sottotitolo", imageName: "house",showDismissedButton: true,showOnBoarding: $showOnBoarding)
+            PageView(title: "Have fun!", subtitle: "Experience the joy of living and playing with your dog", imageName: "house",showDismissedButton: true,showOnBoarding: $showOnBoarding)
                
             
         } // TabView
