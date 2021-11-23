@@ -79,7 +79,7 @@ struct OnboardingView: View{
             PageView(title: "Take care of your virtual pet", subtitle: "Keep under control his three stats: happiness,relax and attachment.", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
                 
 
-            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities to do with your dog", imageName: "sun.haze.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
+            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities to do with your dog.", imageName: "sun.haze.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
                
 
             PageView(title: "Have fun!", subtitle: "Experience the joy of living and playing with your dog.", imageName: "face.smiling",showDismissedButton: true,showOnBoarding: $showOnBoarding,systemImage: true)
@@ -145,7 +145,14 @@ struct PageView: View {
         
             if showDismissedButton{
                 
-                Button(action: {showOnBoarding.toggle()}){
+                Button(action: {
+                    
+                    
+                    showOnBoarding.toggle()
+                                        
+                }
+                )
+                {
                     
                     
                     RoundedRectangle(cornerRadius: 10)
