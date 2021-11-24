@@ -20,7 +20,7 @@ struct HorizCategoryView: View {
         
         ScrollView(.horizontal,showsIndicators: false){
         
-            HStack(){
+            HStack(spacing:15){
             
             ForEach(activitiesArray){
                 
@@ -44,7 +44,7 @@ struct HorizCategoryView: View {
                         .aspectRatio(contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: 40))
                         .scaledToFit()
-                        .frame(width: 180  , height: 140)
+                        .frame(width: 162  , height: 126)
                         .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
                         
                 }
@@ -56,8 +56,6 @@ struct HorizCategoryView: View {
         }
             .padding([.top, .leading, .bottom], 16)
         }
-        
-    
     }
 }
     
@@ -88,10 +86,10 @@ struct ActivityView: View {
                    
                 
 //          ACTIVITY OF THE DAY
-                Text("Let's do the activity of the day!")
+                Text("Highlight of the day")
                     
-                    .font(.system(size: 28, weight:.light, design: .rounded))
-                    .frame(width: 358, height: 50, alignment: .leading)
+                    .font(.system(size: 28, weight:.bold, design: .rounded))
+                    .frame(width: 358, height: 20, alignment: .leading)
                     .padding()
                 
 //        CHECK GENERARE NUMERO RANDOMICO BASATO SU SEED
@@ -99,7 +97,7 @@ struct ActivityView: View {
                 Button {
                     
                     
-                    activityGesture = activityStruct.activities[rand]
+                    activityGesture = activityStruct.activities[8]
                     
                     
                     showModal.toggle()
@@ -107,7 +105,7 @@ struct ActivityView: View {
                     
                 } label: {
                 
-                    Image(activityStruct.activities[rand].image)
+                    Image(activityStruct.activities[8].image)
                     .resizable()
                     .frame(width: 350, height: 268)
                     .aspectRatio(contentMode: .fit)
@@ -115,7 +113,7 @@ struct ActivityView: View {
                     
                     .scaledToFit()
                     .overlay(RoundedRectangle(cornerRadius: 60).stroke(Color(red: 143/255, green: 149/255, blue: 211/255),lineWidth: 6))
-                   // .padding()
+                    .padding(.bottom,25)
                 }
                 
                 
@@ -124,30 +122,32 @@ struct ActivityView: View {
 //            RELAX HORIZONTAL STACK          //
                 Text("Relax")
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
-                    .frame(width: 358, height: 50, alignment: .leading)
+                    .frame(width: 358, height: 20, alignment: .leading)
                 
                 HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .relax,activityGesture: $activityGesture)
                     
+                    .padding(.bottom,20)
+                
                 
 //            FUN HORIZONTAL STACK          //
                 Text("Fun")
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
-                    .frame(width: 358, height: 50, alignment: .leading)
+                    .frame(width: 358, height: 20, alignment: .leading)
                 
                 
                 HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .fun,activityGesture: $activityGesture)
                 
+                    .padding(.bottom,20)
                 
-                
-//            CUDDLE HORIZONTAL STACK          //
+//            CUDDLE HORIZONTAL STACK
+    //
                 Text("Cuddle")
                     .font(.system(size: 28, weight:.semibold, design: .rounded))
-                    .frame(width: 358, height: 50, alignment: .leading)
+                    .frame(width: 358, height: 20, alignment: .leading)
                 
                 
                 HorizCategoryView(showModal: $showModal, activitiesArray: activityStruct.activities, type: .cuddle,activityGesture: $activityGesture)
-                
-                    
+
             }
         
             
@@ -156,13 +156,12 @@ struct ActivityView: View {
             ModelView(showModal: $showModal, activity: $activityGesture)})
             
         }
-        
-}
 
 }
 
+}
 
-    
+
 struct ActivityView_Previews: PreviewProvider {
     static var previews: some View {
         ActivityView()

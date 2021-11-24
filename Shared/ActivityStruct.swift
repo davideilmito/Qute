@@ -15,7 +15,6 @@ enum ActivityCategory :Equatable{
     case cuddle
     case none
     
-    
     func getPetStat()->String{
         
         switch self{

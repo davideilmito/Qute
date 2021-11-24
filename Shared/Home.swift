@@ -13,11 +13,13 @@ import SwiftUI
 struct HomeView: View {
     
     
-    @AppStorage("ShowOnBoarding") var showOnBording = true
-
+//    @AppStorage("ShowOnBoarding") var showOnBording = true
+    @State var showOnBording = true
+    
+    
     init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(  Color(red: 143/255, green: 149/255, blue: 211/255))
-       UIPageControl.appearance().pageIndicatorTintColor = UIColor.black
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(  Color(red: 211/255, green: 214/255, blue: 238/255))
+       UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color(red: 83/255, green: 89/255, blue: 151/255))
        }
     
     var body: some View {
@@ -44,21 +46,14 @@ struct HomeView: View {
                     Label("Diary",systemImage: "calendar")
                 }
             
-            
-                SettingsView()
-                .tabItem{
-                    Label("Settings",systemImage: "gearshape.fill")
-                        
-                }
+
         
         }.accentColor(Color(red: 143/255, green: 149/255, blue: 211/255))
             .fullScreenCover(isPresented: $showOnBording, content: {OnboardingView(showOnBoarding: $showOnBording)})
-        
-    }
+        }
 
 
 }
-
 
 
 
@@ -67,13 +62,22 @@ struct OnboardingView: View{
     
     @Binding var showOnBoarding : Bool
     
-    
     var body: some View{
         
         
         TabView{
             
-           PageView(title: "Qute", subtitle: "Qute will help you to build an healthy reletionship  with your dog.", imageName: "Qute",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: false)
+           PageView(title: "Qute", subtitle: "Qute will help you to build an healthy relationship  with your dog.", imageName: "Qute white",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: false)
+            
+                .frame(
+                             minWidth: 0,
+                             maxWidth: .infinity,
+                             minHeight: 0,
+                             maxHeight: .infinity
+                           )
+                             
+            
+            .background(Color(red: 143/255, green: 149/255, blue: 211/255))
               
 
             PageView(title: "Take care of your virtual pet", subtitle: "Keep under control his three stats: happiness,relax and attachment.", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
@@ -86,7 +90,7 @@ struct OnboardingView: View{
                
             
         } // TabView
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(PageTabViewStyle()).ignoresSafeArea()
         
 
     }
@@ -130,11 +134,11 @@ struct PageView: View {
                 
            
                 
-                
+            if systemImage{
             
             Text(title)
-                .font(.system(size: 42, weight: .bold, design: .rounded))
-                .padding()
+                    .font(.system(size: 42, weight:.bold, design: .rounded))
+                    .padding()
                 
             
             Text(subtitle)
@@ -143,6 +147,24 @@ struct PageView: View {
             
                 .padding()
         
+            }else {
+                
+                Text(title)
+                    .font(.system(size: 42, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .padding()
+                    
+                
+                Text(subtitle)
+                    .font(.system(size: 30, weight:.light, design: .rounded))
+                    .foregroundColor(.white)
+                
+                    .padding()
+                
+                
+            }
+                
+                
             if showDismissedButton{
                 
                 Button(action: {
@@ -171,20 +193,25 @@ struct PageView: View {
             
         
         } //VStack
-        .frame(
-              minWidth: 0,
-              maxWidth: .infinity,
-              minHeight: 0,
-              maxHeight: .infinity
-            )
+//        .edgesIgnoringSafeArea(.all)
+//        .frame(
+//              minWidth: 0,
+//              maxWidth: .infinity,
+//              minHeight: 0,
+//              maxHeight: .infinity
+//            )
+              
+        
+        
+    
     }
         
 }
 
 
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView().environmentObject(Pet(happiness: Int.random(in: 0...100), attachment: Int.random(in:0...100), relax: Int.random(in: 0...100)))
+    
     }
 }
