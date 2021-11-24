@@ -83,7 +83,7 @@ struct OnboardingView: View{
             PageView(title: "Take care of your virtual pet", subtitle: "Keep under control his three stats: happiness,relax and attachment.", imageName: "pawprint",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
                 
 
-            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities to do with your dog.", imageName: "sun.haze.fill",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
+            PageView(title: "Reduce your stress", subtitle: "Discover a lot of relaxing activities to do with your dog.", imageName: "sun.haze",showDismissedButton: false,showOnBoarding: $showOnBoarding,systemImage: true)
                
 
             PageView(title: "Have fun!", subtitle: "Experience the joy of living and playing with your dog.", imageName: "face.smiling",showDismissedButton: true,showOnBoarding: $showOnBoarding,systemImage: true)
@@ -109,10 +109,11 @@ struct PageView: View {
     
     var body: some View{
         
-        VStack{
+        VStack(){
             
             
             if systemImage{
+                
                 
                 
                 Image(systemName: imageName)
@@ -121,20 +122,27 @@ struct PageView: View {
                     .frame(width: 150, height: 150)
                     .padding()
                     .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
-                    
                 
-            }else {Image(imageName)
+                
+            }else {
+                
+                
+                Image(imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 150)
                     .padding()
                     .foregroundColor(Color(red: 143/255, green: 149/255, blue: 211/255))
-            }
+                
+                
+                }
                 
                 
            
                 
             if systemImage{
+                
+                VStack(alignment: .leading){
             
             Text(title)
                     .font(.system(size: 42, weight:.bold, design: .rounded))
@@ -146,8 +154,16 @@ struct PageView: View {
                 .foregroundColor(Color.secondary)
             
                 .padding()
-        
+                .multilineTextAlignment(.leading)
+                
+                }
+                    
             }else {
+                
+                
+                
+                VStack(alignment: .leading){
+            
                 
                 Text(title)
                     .font(.system(size: 42, weight: .bold, design: .rounded))
@@ -158,9 +174,10 @@ struct PageView: View {
                 Text(subtitle)
                     .font(.system(size: 30, weight:.light, design: .rounded))
                     .foregroundColor(.white)
-                
                     .padding()
-                
+                    
+                    
+                }
                 
             }
                 
@@ -189,20 +206,8 @@ struct PageView: View {
                 
             }
             
-            
-            
-        
         } //VStack
-//        .edgesIgnoringSafeArea(.all)
-//        .frame(
-//              minWidth: 0,
-//              maxWidth: .infinity,
-//              minHeight: 0,
-//              maxHeight: .infinity
-//            )
               
-        
-        
     
     }
         

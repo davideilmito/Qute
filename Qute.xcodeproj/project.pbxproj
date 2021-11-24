@@ -136,11 +136,11 @@
 		D72E461A274508A60065C25F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D73117A327455DE7008C33DB /* Home.swift */,
 				D72E461B274508A60065C25F /* QuteApp.swift */,
 				D7320F762746C9CB00779CD4 /* ActivityStruct.swift */,
 				97FA8C93274519F2007F3084 /* ChoosePetView.swift */,
 				BA32AA5E27452324002FDECB /* PetCardView.swift */,
-				D73117A327455DE7008C33DB /* Home.swift */,
 				D7320F792746CD3D00779CD4 /* ActivitiesStruct.swift */,
 				D73117AF27456236008C33DB /* DiaryView.swift */,
 				783B6AEA274BC87E001A3E6F /* DataSource.swift */,
